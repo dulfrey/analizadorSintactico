@@ -39,28 +39,7 @@ public class AnalizadorSintactico {
 
 
 private void file() { 
-	if ( this.currentToken.getType().equals("NEWLINE")  
-|| this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
-|| this.currentToken.getType().equals("LOG")  
-|| this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("IF")  
-|| this.currentToken.getType().equals("FOR")  
-|| this.currentToken.getType().equals("WHILE")  
-|| this.currentToken.getType().equals("FUNCION")  
-|| this.currentToken.getType().equals("EOF")  ) { 
+	if ( this.currentToken.getType().equals("NEWLINE")  || this.currentToken.getType().equals("OTHER")  || this.currentToken.getType().equals("LOG")  || this.currentToken.getType().equals("RETORNO")  || this.currentToken.getType().equals("IMPORT")  || this.currentToken.getType().equals("FROM")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  || this.currentToken.getType().equals("IF")  || this.currentToken.getType().equals("FOR")  || this.currentToken.getType().equals("WHILE")  || this.currentToken.getType().equals("FUNCION")  || this.currentToken.getType().equals("EOF")  ) { 
 		file_a();
 		emparejar("EOF");
 	}
@@ -69,26 +48,7 @@ private void file() {
 	}
 }
 private void file_a() { 
-	if ( this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
-|| this.currentToken.getType().equals("LOG")  
-|| this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("IF")  
-|| this.currentToken.getType().equals("FOR")  
-|| this.currentToken.getType().equals("WHILE")  
-|| this.currentToken.getType().equals("FUNCION")  ) { 
+	if ( this.currentToken.getType().equals("OTHER")  || this.currentToken.getType().equals("LOG")  || this.currentToken.getType().equals("RETORNO")  || this.currentToken.getType().equals("IMPORT")  || this.currentToken.getType().equals("FROM")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  || this.currentToken.getType().equals("IF")  || this.currentToken.getType().equals("FOR")  || this.currentToken.getType().equals("WHILE")  || this.currentToken.getType().equals("FUNCION")  ) { 
 		stat();
 		file_a();
 	}
@@ -101,22 +61,7 @@ private void file_a() {
 	}
 }
 private void stat() { 
-	if ( this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
-|| this.currentToken.getType().equals("LOG")  
-|| this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  ) { 
+	if ( this.currentToken.getType().equals("OTHER")  || this.currentToken.getType().equals("LOG")  || this.currentToken.getType().equals("RETORNO")  || this.currentToken.getType().equals("IMPORT")  || this.currentToken.getType().equals("FROM")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  ) { 
 		simple_stat();
 	}
 	else if ( this.currentToken.getType().equals("IF")  
@@ -141,10 +86,7 @@ private void complex_stat() {
 	}
 }
 private void simple_stat() { 
-	if ( this.currentToken.getType().equals("ID")  ) { 
-		assignment();
-	}
-	else if ( this.currentToken.getType().equals("LOG")  ) { 
+	if ( this.currentToken.getType().equals("LOG")  ) { 
 		log();
 	}
 	else if ( this.currentToken.getType().equals("IMPORT")  
@@ -157,10 +99,7 @@ private void simple_stat() {
 	else if ( this.currentToken.getType().equals("OTHER")  ) { 
 		emparejar("OTHER");
 	}
-	else if ( this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
+	else if ( this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
@@ -168,31 +107,14 @@ private void simple_stat() {
 || this.currentToken.getType().equals("OKEY")  
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("ID")  ) { 
-		expr();
+		atom();
+		emparejar("NEWLINE");
 	}
 }
 private void assignment() { 
 	if ( this.currentToken.getType().equals("ID")  ) { 
 		variable();
 		emparejar("ASSIGN");
-		assign_a();
-	}
-}
-private void assign_a() { 
-	if ( this.currentToken.getType().equals("ID")  ) { 
-		assignment();
-	}
-	else if ( this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("ID")  ) { 
 		expr();
 	}
 }
@@ -200,30 +122,24 @@ private void if_stat() {
 	if ( this.currentToken.getType().equals("IF")  ) { 
 		emparejar("IF");
 		condition_block();
-		more();
+		else_if_r();
+		else_r();
 	}
 }
-private void more() { 
+private void else_if_r() { 
 	if ( this.currentToken.getType().equals("ELSE")  ) { 
 		emparejar("ELSE");
 		emparejar("IF");
 		condition_block();
-		more();
+		else_if_r();
 	}
-	else if ( this.currentToken.getType().equals("ELSE")  ) { 
-		emparejar("ELSE");
-		stat_block();
-	}
-	else if ( this.currentToken.getType().equals("NEWLINE")  
+	else if ( this.currentToken.getType().equals("ELSE")  
+|| this.currentToken.getType().equals("NEWLINE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
@@ -231,6 +147,36 @@ private void more() {
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OKEY")  
 || this.currentToken.getType().equals("OBRACE")  
+|| this.currentToken.getType().equals("ID")  
+|| this.currentToken.getType().equals("IF")  
+|| this.currentToken.getType().equals("FOR")  
+|| this.currentToken.getType().equals("WHILE")  
+|| this.currentToken.getType().equals("FUNCION")  
+|| this.currentToken.getType().equals("CBRACE")  
+|| this.currentToken.getType().equals("END")  
+|| this.currentToken.getType().equals("EOF")  ) { 
+		
+	}
+}
+private void else_r() { 
+	if ( this.currentToken.getType().equals("ELSE")  ) { 
+		emparejar("ELSE");
+		stat_block();
+	}
+	else if ( this.currentToken.getType().equals("NEWLINE")  
+|| this.currentToken.getType().equals("OTHER")  
+|| this.currentToken.getType().equals("LOG")  
+|| this.currentToken.getType().equals("RETORNO")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
+|| this.currentToken.getType().equals("INT")  
+|| this.currentToken.getType().equals("FLOAT")  
+|| this.currentToken.getType().equals("TRUE")  
+|| this.currentToken.getType().equals("FALSE")  
+|| this.currentToken.getType().equals("STRING")  
+|| this.currentToken.getType().equals("OKEY")  
+|| this.currentToken.getType().equals("OBRACE")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
@@ -282,14 +228,10 @@ private void f_more() {
 		f_more();
 	}
 	else if ( this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
@@ -297,6 +239,7 @@ private void f_more() {
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OKEY")  
 || this.currentToken.getType().equals("OBRACE")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
@@ -351,19 +294,17 @@ private void id_sub() {
 || this.currentToken.getType().equals("ASSIGN")  
 || this.currentToken.getType().equals("NEWLINE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OBRACE")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
@@ -376,6 +317,7 @@ private void id_sub() {
 || this.currentToken.getType().equals("DIV")  
 || this.currentToken.getType().equals("MOD")  
 || this.currentToken.getType().equals("PLUS")  
+|| this.currentToken.getType().equals("MINUS")  
 || this.currentToken.getType().equals("LTEG")  
 || this.currentToken.getType().equals("GTEG")  
 || this.currentToken.getType().equals("LT")  
@@ -400,17 +342,7 @@ private void retornar() {
 	}
 }
 private void condition_block() { 
-	if ( this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("ID")  ) { 
+	if ( this.currentToken.getType().equals("OPAR")  || this.currentToken.getType().equals("MINUS")  || this.currentToken.getType().equals("NOT")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  ) { 
 		expr();
 		c_block_a();
 		stat_block();
@@ -422,20 +354,17 @@ private void c_block_a() {
 	}
 	else if ( this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OKEY")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
@@ -450,14 +379,10 @@ private void stat_block() {
 		emparejar("CBRACE");
 	}
 	else if ( this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
@@ -465,6 +390,7 @@ private void stat_block() {
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OKEY")  
 || this.currentToken.getType().equals("OBRACE")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
@@ -474,26 +400,7 @@ private void stat_block() {
 	}
 }
 private void s_block_a() { 
-	if ( this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
-|| this.currentToken.getType().equals("LOG")  
-|| this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("IF")  
-|| this.currentToken.getType().equals("FOR")  
-|| this.currentToken.getType().equals("WHILE")  
-|| this.currentToken.getType().equals("FUNCION")  ) { 
+	if ( this.currentToken.getType().equals("OTHER")  || this.currentToken.getType().equals("LOG")  || this.currentToken.getType().equals("RETORNO")  || this.currentToken.getType().equals("IMPORT")  || this.currentToken.getType().equals("FROM")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  || this.currentToken.getType().equals("IF")  || this.currentToken.getType().equals("FOR")  || this.currentToken.getType().equals("WHILE")  || this.currentToken.getType().equals("FUNCION")  ) { 
 		stat();
 		s_block_a();
 	}
@@ -513,17 +420,7 @@ private void array() {
 	}
 }
 private void array_a() { 
-	if ( this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("ID")  ) { 
+	if ( this.currentToken.getType().equals("OPAR")  || this.currentToken.getType().equals("MINUS")  || this.currentToken.getType().equals("NOT")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  ) { 
 		expr();
 		array_b();
 	}
@@ -582,31 +479,27 @@ private void var_a() {
 || this.currentToken.getType().equals("NEQ")  
 || this.currentToken.getType().equals("AND")  
 || this.currentToken.getType().equals("OR")  
+|| this.currentToken.getType().equals("NEWLINE")  
 || this.currentToken.getType().equals("CPAR")  
 || this.currentToken.getType().equals("COMMA")  
 || this.currentToken.getType().equals("CKEY")  
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
 || this.currentToken.getType().equals("STRING")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
 || this.currentToken.getType().equals("FUNCION")  
-|| this.currentToken.getType().equals("NEWLINE")  
-|| this.currentToken.getType().equals("CBRACE")  
-|| this.currentToken.getType().equals("END")  
-|| this.currentToken.getType().equals("EOF")  ) { 
+|| this.currentToken.getType().equals("CBRACE")  ) { 
 		
 	}
 }
@@ -632,46 +525,32 @@ private void var_b() {
 || this.currentToken.getType().equals("NEQ")  
 || this.currentToken.getType().equals("AND")  
 || this.currentToken.getType().equals("OR")  
+|| this.currentToken.getType().equals("NEWLINE")  
 || this.currentToken.getType().equals("CPAR")  
 || this.currentToken.getType().equals("COMMA")  
 || this.currentToken.getType().equals("CKEY")  
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
 || this.currentToken.getType().equals("STRING")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
 || this.currentToken.getType().equals("FUNCION")  
-|| this.currentToken.getType().equals("NEWLINE")  
-|| this.currentToken.getType().equals("CBRACE")  
-|| this.currentToken.getType().equals("END")  
-|| this.currentToken.getType().equals("EOF")  ) { 
+|| this.currentToken.getType().equals("CBRACE")  ) { 
 		
 	}
 }
 private void var_c() { 
-	if ( this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  
-|| this.currentToken.getType().equals("INT")  
-|| this.currentToken.getType().equals("FLOAT")  
-|| this.currentToken.getType().equals("TRUE")  
-|| this.currentToken.getType().equals("FALSE")  
-|| this.currentToken.getType().equals("STRING")  
-|| this.currentToken.getType().equals("OKEY")  
-|| this.currentToken.getType().equals("OBRACE")  
-|| this.currentToken.getType().equals("ID")  ) { 
+	if ( this.currentToken.getType().equals("OPAR")  || this.currentToken.getType().equals("MINUS")  || this.currentToken.getType().equals("NOT")  || this.currentToken.getType().equals("INT")  || this.currentToken.getType().equals("FLOAT")  || this.currentToken.getType().equals("TRUE")  || this.currentToken.getType().equals("FALSE")  || this.currentToken.getType().equals("STRING")  || this.currentToken.getType().equals("OKEY")  || this.currentToken.getType().equals("OBRACE")  || this.currentToken.getType().equals("ID")  ) { 
 		expr();
 		array_b();
 	}
@@ -696,8 +575,7 @@ private void par_a() {
 	}
 }
 private void expr() { 
-	if ( this.currentToken.getType().equals("MINUS")  
-|| this.currentToken.getType().equals("NOT")  ) { 
+	if ( this.currentToken.getType().equals("MINUS")  || this.currentToken.getType().equals("NOT")  ) { 
 		op_u();
 		expr();
 		expr_a();
@@ -716,7 +594,7 @@ private void expr() {
 || this.currentToken.getType().equals("OKEY")  
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("ID")  ) { 
-		object();
+		atom();
 		expr_a();
 	}
 }
@@ -737,7 +615,8 @@ private void expr_a() {
 || this.currentToken.getType().equals("EQ")  
 || this.currentToken.getType().equals("NEQ")  
 || this.currentToken.getType().equals("AND")  
-|| this.currentToken.getType().equals("OR")  ) { 
+|| this.currentToken.getType().equals("OR")  
+|| this.currentToken.getType().equals("ASSIGN")  ) { 
 		op();
 		expr();
 	}
@@ -755,36 +634,33 @@ private void expr_a() {
 || this.currentToken.getType().equals("NEQ")  
 || this.currentToken.getType().equals("AND")  
 || this.currentToken.getType().equals("OR")  
+|| this.currentToken.getType().equals("ASSIGN")  
 || this.currentToken.getType().equals("CPAR")  
 || this.currentToken.getType().equals("COMMA")  
 || this.currentToken.getType().equals("CKEY")  
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("OTHER")  
-|| this.currentToken.getType().equals("ID")  
-|| this.currentToken.getType().equals("IMPORT")  
-|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("LOG")  
 || this.currentToken.getType().equals("RETORNO")  
-|| this.currentToken.getType().equals("OPAR")  
-|| this.currentToken.getType().equals("NOT")  
+|| this.currentToken.getType().equals("IMPORT")  
+|| this.currentToken.getType().equals("FROM")  
 || this.currentToken.getType().equals("INT")  
 || this.currentToken.getType().equals("FLOAT")  
 || this.currentToken.getType().equals("TRUE")  
 || this.currentToken.getType().equals("FALSE")  
 || this.currentToken.getType().equals("STRING")  
 || this.currentToken.getType().equals("OKEY")  
+|| this.currentToken.getType().equals("ID")  
 || this.currentToken.getType().equals("IF")  
 || this.currentToken.getType().equals("FOR")  
 || this.currentToken.getType().equals("WHILE")  
 || this.currentToken.getType().equals("FUNCION")  
 || this.currentToken.getType().equals("NEWLINE")  
-|| this.currentToken.getType().equals("CBRACE")  
-|| this.currentToken.getType().equals("END")  
-|| this.currentToken.getType().equals("EOF")  ) { 
+|| this.currentToken.getType().equals("CBRACE")  ) { 
 		
 	}
 }
-private void object() { 
+private void atom() { 
 	if ( this.currentToken.getType().equals("INT")  ) { 
 		emparejar("INT");
 	}
@@ -807,11 +683,12 @@ private void object() {
 		objeto();
 	}
 	else if ( this.currentToken.getType().equals("ID")  ) { 
-		accessarray();
-	}
-	else if ( this.currentToken.getType().equals("ID")  ) { 
 		variable();
 	}
+	else if ( this.currentToken.getType().equals("ID")  ) { 
+		accessarray();
+	}
+	
 }
 private void objeto() { 
 	if ( this.currentToken.getType().equals("OBRACE")  ) { 
@@ -894,14 +771,16 @@ private void op() {
 	else if ( this.currentToken.getType().equals("OR")  ) { 
 		emparejar("OR");
 	}
+	else if ( this.currentToken.getType().equals("ASSIGN")  ) { 
+		emparejar("ASSIGN");
+	}
 }
-
-
 
 	
 	public final void emparejar(String tokEsperado)
 	{
-		//System.out.println(tokEsperado + " "+currentToken.getType());
+		//Token dado -> token esperado
+		System.out.println(currentToken.getType()+" -> "+tokEsperado);
 		try {
 			if (currentToken.getType().equals(tokEsperado)) {
 				currentToken = getNextToken();
@@ -917,6 +796,7 @@ private void op() {
 	private void errorSintaxis(String tokDado,String tokEsperado) {
 		System.out.println( "Error! Token no esperado: " + tokDado);
 		System.out.println( "Se esperaba:" + tokEsperado);
+		System.exit(0);
 		
 	}
 	

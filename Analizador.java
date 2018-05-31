@@ -269,10 +269,14 @@ public class Analizador {
 				word.set_pos(row, p+1, column);
 				svar=true;
 			}
-			Tokens.addTerminal("NEWLINE");
+			if(file.indexOf(line)<file.size()-1) {
+				Tokens.addTerminal("NEWLINE");
+				Output.sav("NEWLINE");
+			}
 		}
 
 		Tokens.addTerminal("EOF");
+		Output.sav("EOF");
 		Tokens.addTerminal("$");
 
 		Tokens.the_tokens = new Token[Tokens.syntax_pile.size()];
@@ -280,9 +284,9 @@ public class Analizador {
 			Tokens.the_tokens[i]=Tokens.syntax_pile.get(i);
 		}
 
-		for (int i = 0; i < Tokens.the_tokens.length; i++) {
+		/*for (int i = 0; i < Tokens.the_tokens.length; i++) {
 			System.out.println(Tokens.the_tokens[i].type);
-		}
+		}*/
 		
 		new AnalizadorSintactico();
 	}

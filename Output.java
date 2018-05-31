@@ -32,6 +32,10 @@ public class Output {
 		t_file.println("POINT");
 		Tokens.addTerminal("POINT");
 	}
+	
+	public static void sav(String name) {
+		t_file.println(name);
+	}
 
 	public static void saveToken(String token, int row, int column) {
 		file.println("<"+Tokens.get(token)+","+row+","+column+">");
