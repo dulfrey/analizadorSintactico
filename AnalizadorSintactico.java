@@ -108,7 +108,7 @@ private void simple_stat() {
 || this.currentToken.getType().equals("OBRACE")  
 || this.currentToken.getType().equals("ID")  ) { 
 		atom();
-		emparejar("NEWLINE");
+		
 	}
 }
 private void assignment() { 
