@@ -1,0 +1,6 @@
+
+ funcion factorial(numero)
+  if (numero == 0) {
+    retorno (1)
+  }
+

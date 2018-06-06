@@ -1,0 +1,6 @@
+> GTEQ
+< LTEQ
+= EQ
+! NEQ
+& AND
+| OR

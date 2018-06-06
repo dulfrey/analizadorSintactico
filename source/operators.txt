@@ -1,0 +1,16 @@
+> GT
+< LT
+! NEQ
++ PLUS
+- MINUS
+* MULT
+/ DIV
+% MOD
+^ POW
+= ASSIGN
+>= GTEG
+<= LTEG
+== EQ
+!= NEQ
+&& AND
+|| OR
